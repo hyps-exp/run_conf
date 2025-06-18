@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]) {
   if (argc < 3) {
     std::cerr << "Usage:\n"
-              << "  add <run> KEY=VALUE ...\n"
+              << "  add <run> KEY=FILENAME ...\n"
               << "  print <run>\n"
               << "  remove <run>\n";
     return 1;
