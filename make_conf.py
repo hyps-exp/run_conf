@@ -35,10 +35,9 @@ def main():
     with output_path.open("w") as f:
         f.write(f"# auto-generated configuration for run {run_key} on {now}\n\n")
         for key, value in params.items():
-            f.write(f"{key}:\t\t{value}\n")
+            f.write(f"{key + ':':<16}{value}\n")
 
     print(f"Configuration written to: {output_path}")
 
 if __name__ == "__main__":
     main()
-
