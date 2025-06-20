@@ -49,6 +49,7 @@ PARAMS=(
 
 for (( RUN=MIN_RUN; RUN<=MAX_RUN; RUN++ )); do
   echo "Updating run $RUN ..."
+  ./bin/param_db_tool remove "$RUN"
   ./bin/param_db_tool add "$RUN" "${PARAMS[@]}"
 done
 
